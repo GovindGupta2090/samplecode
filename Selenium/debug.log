@@ -1,0 +1,4 @@
+[1203/163918.949:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[1224/012855.277:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[1224/015013.199:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[1224/015019.756:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)

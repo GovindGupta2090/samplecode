@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestNgSuite]">
+  <parameter name="packagelevelpass" value="password"/>
+  <parameter name="uname" value="packagelebveluname"/>
+  <parameter name="anyintValue" value="10"/>
+  <listeners>
+    <listener class-name="ExtentReporting.TestNGListener"/>
+  </listeners>
+  <test name="enable-false-operation(failed)">
+    <classes>
+      <class name="TestNG.TC1">
+        <methods>
+          <include name="TC1_Before_Method"/>
+          <include name="TC1_test2"/>
+          <include name="TC1_After_Method"/>
+        </methods>
+      </class> <!-- TestNG.TC1 -->
+    </classes>
+  </test> <!-- enable-false-operation(failed) -->
+  <test name="Expected_Exception_test(failed)">
+    <classes>
+      <class name="TestNG.TC2">
+        <methods>
+          <include name="TC2_test2"/>
+        </methods>
+      </class> <!-- TestNG.TC2 -->
+    </classes>
+  </test> <!-- Expected_Exception_test(failed) -->
+  <test name="GroupingTest(failed)">
+    <groups>
+      <run>
+        <include name="grouping"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestNG.TC3">
+        <methods>
+          <include name="TC3_test2"/>
+        </methods>
+      </class> <!-- TestNG.TC3 -->
+      <class name="TestNG.TC4">
+        <methods>
+          <include name="TC4_test3"/>
+        </methods>
+      </class> <!-- TestNG.TC4 -->
+    </classes>
+  </test> <!-- GroupingTest(failed) -->
+  <test name="depend-on-mentod-Test(failed)">
+    <classes>
+      <class name="TestNG.TC5">
+        <methods>
+          <include name="TC5_test1"/>
+          <include name="TC5_test2"/>
+        </methods>
+      </class> <!-- TestNG.TC5 -->
+    </classes>
+  </test> <!-- depend-on-mentod-Test(failed) -->
+  <test name="RunPackage(failed)">
+    <classes>
+      <class name="TestNG.TC6_xml_Parameter">
+        <methods>
+          <include name="add"/>
+        </methods>
+      </class> <!-- TestNG.TC6_xml_Parameter -->
+      <class name="TestNG.TC3">
+        <methods>
+          <include name="TC3_test2"/>
+        </methods>
+      </class> <!-- TestNG.TC3 -->
+      <class name="TestNG.TC2">
+        <methods>
+          <include name="TC2_test2"/>
+        </methods>
+      </class> <!-- TestNG.TC2 -->
+      <class name="TestNG.TC1">
+        <methods>
+          <include name="TC1_Before_Method"/>
+          <include name="TC1_test2"/>
+          <include name="TC1_After_Method"/>
+        </methods>
+      </class> <!-- TestNG.TC1 -->
+    </classes>
+  </test> <!-- RunPackage(failed) -->
+</suite> <!-- Failed suite [TestNgSuite] -->

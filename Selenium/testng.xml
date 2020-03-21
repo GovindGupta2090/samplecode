@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNgSuite">
+
+<listeners>
+<listener class-name="ExtentReporting.TestNGListener"></listener>
+</listeners>
+
+
+	<parameter name ="uname" value="packagelebveluname"/>
+				<parameter name="packagelevelpass" value="password"/>
+				<parameter name="anyintValue" value="10"/>
+	
+	<test name="enable-false-operation">
+		<classes>
+			<class name="TestNG.TC1" />
+		</classes>
+	</test>
+
+	<test name="Expected_Exception_test">
+		<classes>
+			<class name="TestNG.TC2" />
+		</classes>
+	</test>
+	
+	<test name= "GroupingTest">
+		
+		<!-- <groups>
+		<run>
+		<include name="TC4_SameGroup"/>
+		</run>
+		</groups> -->
+		<groups>
+		<define name="grouping">
+			<include name="TC4_SameGroup"/>
+			<include name ="TC4_case1"/>
+		</define>
+		<run>
+		<include name="grouping"/>
+		</run>
+		
+		
+		</groups>
+		
+		
+		
+		<classes>
+			<class name="TestNG.TC3" />
+			<class name="TestNG.TC4" />
+		</classes>
+		</test>
+		
+		<test name="depend-on-mentod-Test">
+		
+		<classes>
+		<class name="TestNG.TC5"/>
+		</classes>
+		
+			</test>
+
+
+		
+		<test name="parameter-Test">
+				<parameter name ="uname" value="Govind"/>
+				<parameter name="password" value="password"/>
+				<parameter name="anyintValue" value="10"/>
+		<classes>
+		<class name="TestNG.TC6_xml_Parameter"/>
+		</classes>
+		</test>
+		
+				
+				<test name="RunPackage">
+		<packages>
+  <package name="TestNG" />
+    </packages>	
+		</test>
+		</suite> <!-- Suite -->
